@@ -1,4 +1,4 @@
-/*using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 
 namespace BackEnd.Controllers
 {
@@ -30,4 +30,4 @@ namespace BackEnd.Controllers
             .ToArray();
         }
     }
-/*}
+}
