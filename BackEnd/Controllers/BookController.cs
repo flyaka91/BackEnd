@@ -1,10 +1,13 @@
-﻿using BackEnd.Models.Requests;
+﻿using BackEnd.Models.Requests.BookRequest;
+using BackEnd.Models.Requests.UserRequests;
+using BackEnd.Models.Responses.BookResponses;
+using BackEnd.Models.Responses.UserResponses;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BackEnd.Controllers;
 
 [ApiController]
-[Route("api/user")]
+[Route("api/books")]
 public class BookController : ControllerBase
 {
     [HttpPost]
@@ -19,4 +22,23 @@ public class BookController : ControllerBase
     {
         return NoContent();
     }
+
+    [HttpPut("{id}")]
+    public IActionResult UpdateBook([FromRoute] Guid id, [FromBody] UpdateBookRequest request)
+    {
+        return NoContent();
+    }
+                
+    [HttpGet]
+    public ActionResult<List<BookResponse>> GetBooks()
+    {
+        return Ok();
+    }
+
+    //[HttpGet]
+    //public ActionResult<BookResponse> GetBookById()
+    //{
+    //    var user = new BookResponse();
+    //    return Ok(user);
+    //}
 }
