@@ -1,9 +1,7 @@
-﻿using BackEnd.Models.Requests;
-using BackEnd.Models.Responses;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Identity.Data;
+﻿using BackEnd.Models.Requests.UserRequests;
+using BackEnd.Models.Responses.UserResponses;
 using Microsoft.AspNetCore.Mvc;
-using LoginRequest = BackEnd.Models.Requests.LoginRequest;
+using LoginRequest = BackEnd.Models.Requests.UserRequests.LoginRequest;
 
 namespace BackEnd.Controllers;
 
@@ -11,7 +9,7 @@ namespace BackEnd.Controllers;
 [Route("api/user")]
 public class UserController : ControllerBase
 {
-    
+
     [HttpPost]
     public ActionResult<Guid> Register([FromBody] RegisterUserRequest request)
     {
@@ -28,13 +26,13 @@ public class UserController : ControllerBase
 
     //"api/user/{id}"
     [HttpGet("{id}")]
-    public ActionResult<UserWithBooksResponse> GetUserById([FromRoute]Guid id)
+    public ActionResult<UserWithBooksResponse> GetUserById([FromRoute] Guid id)
     {
         var user = new UserWithBooksResponse();
         return Ok(user);
     }
 
-    //"api/user/{id}"
+    //"api/user/"
     [HttpGet]
     public ActionResult<List<UserResponse>> GetUsers()
     {
@@ -61,4 +59,11 @@ public class UserController : ControllerBase
     {
         return NoContent();
     }
+
+    //[HttpGet("{id}")]
+    //public ActionResult<UserWithApplicationResponse> GetUserByApplicationId([FromRoute] Guid id)
+    //{
+    //    var user = new UserWithApplicationResponse();
+    //    return Ok(user);
+    //}
 }
