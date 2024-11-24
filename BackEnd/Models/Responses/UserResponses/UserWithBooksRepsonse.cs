@@ -1,4 +1,6 @@
-﻿namespace BackEnd.Models.Responses;
+﻿using BackEnd.Models.Responses.BookResponses;
+
+namespace BackEnd.Models.Responses.UserResponses;
 
 public class UserWithBooksResponse : UserResponse
 {
