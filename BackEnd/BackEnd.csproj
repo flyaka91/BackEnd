@@ -11,4 +11,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Library Management System.BLL\Library Management System.BLL.csproj" />
+    <ProjectReference Include="..\Library Management System.Core\Library Management System.Core.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,4 +1,4 @@
-﻿namespace BackEnd.Models.Responses.ApplicationResponses;
+﻿namespace BackEnd.Models.Responses;
 
 public class ApplicationResponse
 {

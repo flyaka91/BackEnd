@@ -1,8 +1,7 @@
-﻿namespace BackEnd.Models.Requests.BookRequest;
+﻿namespace BackEnd.Models.Requests;
 
-public class AddBookRequest
+public class UpdateBookRequest
 {
-    public Guid BookId { get; set; }
     public string BookName { get; set; }
     public string Description { get; set; }
     public double Price { get; set; }

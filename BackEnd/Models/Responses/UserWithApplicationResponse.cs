@@ -1,7 +1,4 @@
-﻿using BackEnd.Models.Responses.BookResponses;
-using BackEnd.Models.Responses.ApplicationResponses;
-
-namespace BackEnd.Models.Responses.UserResponses;
+﻿namespace BackEnd.Models.Responses;
 
 public class UserWithApplicationResponse : UserResponse
 {

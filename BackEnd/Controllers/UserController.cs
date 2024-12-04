@@ -1,7 +1,6 @@
-﻿using BackEnd.Models.Requests.UserRequests;
-using BackEnd.Models.Responses.UserResponses;
+﻿using BackEnd.Models.Requests;
+using BackEnd.Models.Responses;
 using Microsoft.AspNetCore.Mvc;
-using LoginRequest = BackEnd.Models.Requests.UserRequests.LoginRequest;
 
 namespace BackEnd.Controllers;
 
@@ -9,12 +8,12 @@ namespace BackEnd.Controllers;
 [Route("api/user")]
 public class UserController : ControllerBase
 {
-
-    [HttpPost]
+    //"api/user/register"
+    [HttpPost("register")]
     public ActionResult<Guid> Register([FromBody] RegisterUserRequest request)
     {
         var addedUserId = Guid.NewGuid();
-        return Ok(addedUserId);
+        return Created();
     }
 
     //"api/user/login"
@@ -60,10 +59,10 @@ public class UserController : ControllerBase
         return NoContent();
     }
 
-    //[HttpGet("{id}")]
-    //public ActionResult<UserWithApplicationResponse> GetUserByApplicationId([FromRoute] Guid id)
-    //{
-    //    var user = new UserWithApplicationResponse();
-    //    return Ok(user);
-    //}
+    [HttpGet("application/{id}")]
+    public ActionResult<UserWithApplicationResponse> GetUserByApplicationId([FromRoute] Guid id)
+    {
+        var user = new UserWithApplicationResponse();
+        return Ok(user);
+    }
 }

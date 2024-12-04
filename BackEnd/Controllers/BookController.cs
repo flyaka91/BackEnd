@@ -1,7 +1,5 @@
-﻿using BackEnd.Models.Requests.BookRequest;
-using BackEnd.Models.Requests.UserRequests;
-using BackEnd.Models.Responses.BookResponses;
-using BackEnd.Models.Responses.UserResponses;
+﻿using BackEnd.Models.Requests;
+using BackEnd.Models.Responses;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BackEnd.Controllers;
@@ -10,6 +8,7 @@ namespace BackEnd.Controllers;
 [Route("api/books")]
 public class BookController : ControllerBase
 {
+    //"api/book/add"
     [HttpPost]
     public ActionResult<Guid> AddBook([FromBody] AddBookRequest request)
     {
@@ -17,18 +16,21 @@ public class BookController : ControllerBase
         return Ok(addedBookId);
     }
 
+    //"api/book/{id}"
     [HttpDelete("{id}")]
     public IActionResult DeleteBook([FromRoute] Guid id)
     {
         return NoContent();
     }
 
+    //"api/book/{id}"
     [HttpPut("{id}")]
     public IActionResult UpdateBook([FromRoute] Guid id, [FromBody] UpdateBookRequest request)
     {
         return NoContent();
     }
-                
+    
+    //"api/book/"            
     [HttpGet]
     public ActionResult<List<BookResponse>> GetBooks()
     {
