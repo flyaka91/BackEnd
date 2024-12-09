@@ -9,7 +9,7 @@ public class AddBookRequest
     public string Author { get; set; }
     public DateTime PublicationDate { get; set; }
 
-    public enum Status
+    public enum StatusType
     {
         Available,
         Unavailable

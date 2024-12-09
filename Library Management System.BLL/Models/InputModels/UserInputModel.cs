@@ -4,14 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Library_Management_System.Core.Dtos
+namespace Library_Management_System.BLL.Models.InputModels
 {
-    public class UsersDto
+    public class UsersInputModel
     {
-        public Guid Id { get; set; }
         public string UserName { get; set; }
-        public string LastName { get; set; }
-        public string Password { get; set; }
         public string PhoneNumber { get; set; }
+        public string Email { get; set; }
     }
 }

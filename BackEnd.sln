@@ -5,11 +5,11 @@ VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackEnd", "BackEnd\BackEnd.csproj", "{4AC636B5-716D-4590-9955-1557B7492548}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library Management System.Core", "Library Management System.Core\Library Management System.Core.csproj", "{70270397-C575-46B3-880E-431F06A5FD29}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManagementSystem.Core", "Library Management System.Core\LibraryManagementSystem.Core.csproj", "{70270397-C575-46B3-880E-431F06A5FD29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library Management System.BLL", "Library Management System.BLL\Library Management System.BLL.csproj", "{FAAE77BF-0184-4022-B4F8-095E48AFA21F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManagementSystem.BLL", "Library Management System.BLL\LibraryManagementSystem.BLL.csproj", "{FAAE77BF-0184-4022-B4F8-095E48AFA21F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library Management System.DAL", "Library Management System.DAL\Library Management System.DAL.csproj", "{D48C591B-8BE8-454E-99AC-400584B17F36}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManagementSystem.DAL", "Library Management System.DAL\LibraryManagementSystem.DAL.csproj", "{D48C591B-8BE8-454E-99AC-400584B17F36}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

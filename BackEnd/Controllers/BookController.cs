@@ -37,10 +37,11 @@ public class BookController : ControllerBase
         return Ok();
     }
 
-    //[HttpGet]
-    //public ActionResult<BookResponse> GetBookById()
-    //{
-    //    var user = new BookResponse();
-    //    return Ok(user);
-    //}
+    //"api/book/{id}"
+    [HttpGet("{id}")]
+    public ActionResult<BookResponse> GetBookById([FromRoute] Guid id)
+    {
+        var user = new BookResponse();
+        return Ok(user);
+    }
 }

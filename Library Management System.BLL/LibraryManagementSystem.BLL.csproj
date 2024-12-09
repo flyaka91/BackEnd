@@ -8,7 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Library Management System.Core\Library Management System.Core.csproj" />
+    <ProjectReference Include="..\Library Management System.Core\LibraryManagementSystem.Core.csproj" />
+    <ProjectReference Include="..\Library Management System.DAL\LibraryManagementSystem.DAL.csproj" />
   </ItemGroup>
 
 </Project>

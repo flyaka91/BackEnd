@@ -8,4 +8,5 @@ public class BookResponse
     public double Price { get; set; }
     public string Author { get; set; }
     public DateTime PublicationDate { get; set; }
+    public ICollection<UserResponse> UserResponses { get; set; }
 }

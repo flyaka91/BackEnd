@@ -11,5 +11,6 @@ public class AddBookRequestValidator : AbstractValidator<AddBookRequest>
         RuleFor(model => model.Description).MaximumLength(232).NotEmpty();
         RuleFor(model => model.Price).NotEmpty();
         RuleFor(model => model.PublicationDate).NotEmpty();
+        //на каждый куэри валидаторы!!!!!!!!!!!!!!
     }
 }
